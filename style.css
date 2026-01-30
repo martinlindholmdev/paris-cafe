@@ -1,17 +1,20 @@
 /* ================================
    CSS VARIABLES — PARIS CAFÉ THEME
    ================================ */
-:root {
-  /* Colors - adjust together with Samara */
-  --color-primary: #2c3e50;
-  --color-secondary: #c9a227;
-  --color-background: #faf9f6;
-  --color-text: #333333;
-  --color-light: #ffffff;
 
-  /* Fonts - add Google Font link to HTML if needed */
-  --font-main: "Georgia", serif;
-  --font-heading: "Georgia", serif;
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-dark-gray: #343434;
+  --color-mid-gray: #746863;
+  --color-light-gray: #bbb5ac;
+  --color-off-white: #efefec;
+  --color-white: #ffffff;
+
+  /* Font */
+  --font-main: "Limelight", sans-serif;
 
   /* Spacing */
   --spacing-sm: 0.5rem;
