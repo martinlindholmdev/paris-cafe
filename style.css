@@ -44,6 +44,36 @@ body {
 /* ================================
    HEADER + NAV — Samara
    ================================ */
+   .header-container {
+      display: grid;
+      grid-template-columns: 0.5fr 4fr;
+      align-items: center;
+      background-color: var(--color-off-white);
+      margin: 0;
+      padding: 1rem;
+   }
+    header .navbar .nav-list {
+      display: flex;
+      justify-content: space-around;
+      font-size: large;
+      list-style: none;
+   }
+   .nav-list a {
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      border: #343434 solid 0.2rem;
+      border-radius: 4rem;
+      margin: 1rem;
+      padding: 1.3rem;
+   }
+   
+   .nav-link:hover {
+      color: #930a0a;
+   }
+   
+   /* main {
+      border: #070707 solid 1rem;
+   } */
 
 /* ================================
    HERO — Samara
