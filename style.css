@@ -1,0 +1,63 @@
+/* ================================
+   CSS VARIABLES — PARIS CAFÉ THEME
+   ================================ */
+:root {
+  /* Colors - adjust together with Samara */
+  --color-primary: #2c3e50;
+  --color-secondary: #c9a227;
+  --color-background: #faf9f6;
+  --color-text: #333333;
+  --color-light: #ffffff;
+
+  /* Fonts - add Google Font link to HTML if needed */
+  --font-main: "Georgia", serif;
+  --font-heading: "Georgia", serif;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+/* ================================
+   RESET
+   ================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+/* ================================
+   HEADER + NAV — Samara
+   ================================ */
+
+/* ================================
+   HERO — Samara
+   ================================ */
+
+/* ================================
+   MENU — Samara
+   ================================ */
+
+/* ================================
+   ABOUT — Martin
+   ================================ */
+
+/* ================================
+   NEWSLETTER — Martin
+   ================================ */
+
+/* ================================
+   FOOTER — Martin
+   ================================ */
