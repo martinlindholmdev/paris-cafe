@@ -45,48 +45,76 @@
 body {
   font-family: var(--font-main);
   color: var(--color-text);
-  background-color: var(--color-background);
-  line-height: 1.6;
+  background-color: var(--color-light-gray);
+  /* line-height: 1.6; */
 }
 
 /* ================================
    HEADER + NAV — Samara
    ================================ */
-.header-container {
-  display: grid;
-  grid-template-columns: 0.5fr 4fr;
-  align-items: center;
-  background-color: var(--color-off-white);
-  margin: 0;
-  padding: 1rem;
-}
-header .navbar .nav-list {
-  display: flex;
-  justify-content: space-around;
-  font-size: large;
-  list-style: none;
-}
-.nav-list a {
-  color: var(--color-dark-gray);
-  text-decoration: none;
-  border: #343434 solid 0.2rem;
-  border-radius: 4rem;
-  margin: 1rem;
-  padding: 1.3rem;
-}
-
-.nav-link:hover {
-  color: #930a0a;
-}
-
-/* main {
-      border: #070707 solid 1rem;
-   } */
-
-/* ================================
+   .header-container {
+      display: grid;
+      grid-template-columns: 3.5fr 3fr;
+      align-items: center;
+      background-color: var(--color-off-white);
+      margin: 0;
+      padding: 0.1rem 2rem;
+      border: var(--color-black) solid 0.1rem;
+      border-radius: 1rem;
+   }
+   .site-branding a img {
+    height: 12rem;
+    width: auto;
+    transform: scale(2.3);
+    transform-origin: left center;
+   }
+    header .navbar .nav-list {
+      display: flex;
+      justify-content:center;
+      font-size: large;
+      list-style: none;
+   }
+   .nav-list a {
+      color: var(--color-dark-gray);
+      text-decoration: none;
+      border: #343434 solid 0.2rem;
+      border-radius: 4rem;
+      margin: 1rem;
+      padding: 1.3rem;
+   }
+   
+   .nav-link:hover {
+      color: #930a0a;
+   }
+  /* ================================
    HERO — Samara
-   ================================ */
-
+   ================================ */ 
+   main {
+      text-align: center;
+      padding: 4rem;
+      margin: 0rem;
+   }
+   #hero {
+    width: 100%;
+    color: var(--color-white);
+   }
+   h1 {
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 3rem;
+   }
+   #hero p {
+    margin: 1rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+   }
+   #hero img {
+    border: var(--color-dark-gray) solid 0.3rem;
+    border-radius: 5rem;
+    padding: 0.5rem;
+    width: 100rem;
+    height: auto;
+   }
 /* ================================
    MENU — Samara
    ================================ */
