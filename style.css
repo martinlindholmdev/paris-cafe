@@ -1,28 +1,39 @@
 /* ================================
    CSS VARIABLES — PARIS CAFÉ THEME
    ================================ */
-:root {
-  /* Colors - adjust together with Samara */
-  --color-primary: #2c3e50;
-  --color-secondary: #c9a227;
-  --color-background: #faf9f6;
-  --color-text: #333333;
-  --color-light: #ffffff;
 
-  /* Fonts - add Google Font link to HTML if needed */
-  --font-main: "Georgia", serif;
-  --font-heading: "Georgia", serif;
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-dark-gray: #343434;
+  --color-mid-gray: #746863;
+  --color-light-gray: #bbb5ac;
+  --color-off-white: #efefec;
+  --color-white: #ffffff;
+
+  /* Semantic (fixes your body variables) */
+  --color-text: var(--color-black);
+  --color-background: var(--color-off-white);
+
+  /* Font */
+  --font-main: "Limelight", sans-serif;
 
   /* Spacing */
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
+
+  /* Nav */
+  --nav-height: 72px;
 }
 
 /* ================================
    RESET
    ================================ */
+
 *,
 *::before,
 *::after {
@@ -34,18 +45,76 @@
 body {
   font-family: var(--font-main);
   color: var(--color-text);
-  background-color: var(--color-background);
-  line-height: 1.6;
+  background-color: var(--color-light-gray);
+  /* line-height: 1.6; */
 }
 
 /* ================================
    HEADER + NAV — Samara
    ================================ */
+.header-container {
+  display: grid;
+  grid-template-columns: 3.5fr 3fr;
+  align-items: center;
+  background-color: var(--color-off-white);
+  margin: 0;
+  padding: 0.1rem 2rem;
+  border: var(--color-black) solid 0.1rem;
+  border-radius: 1rem;
+}
+.site-branding a img {
+  height: 12rem;
+  width: auto;
+  transform: scale(2.3);
+  transform-origin: left center;
+}
+header .navbar .nav-list {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  list-style: none;
+}
+.nav-list a {
+  color: var(--color-dark-gray);
+  text-decoration: none;
+  border: #343434 solid 0.2rem;
+  border-radius: 4rem;
+  margin: 1rem;
+  padding: 1.3rem;
+}
 
+.nav-link:hover {
+  color: #930a0a;
+}
 /* ================================
    HERO — Samara
    ================================ */
-
+main {
+  text-align: center;
+  padding: 4rem;
+  margin: 0rem;
+}
+#hero {
+  width: 100%;
+  color: var(--color-white);
+}
+h1 {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 3rem;
+}
+#hero p {
+  margin: 1rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+#hero img {
+  border: var(--color-dark-gray) solid 0.3rem;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  width: 100rem;
+  height: auto;
+}
 /* ================================
    MENU — Samara
    ================================ */
@@ -55,9 +124,184 @@ body {
    ================================ */
 
 /* ================================
-   NEWSLETTER — Martin
+   UPDATES SECTION — Martin
    ================================ */
 
+#updates {
+  background-color: var(--color-light-gray);
+  color: var(--color-black);
+  scroll-margin-top: 72px;
+  min-height: calc(100vh - 72px);
+  padding: calc(64px + 72px) 32px 64px;
+  display: flex;
+  align-items: center;
+}
+
+.updates-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  margin-bottom: 32px;
+}
+
+#updates h2 {
+  font-size: 56px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+.signup-text {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+  color: var(--color-dark-gray);
+}
+
+.signup-form {
+  position: relative;
+  background-color: var(--color-off-white);
+  border: 1px solid var(--color-dark-gray);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  border: 1px solid var(--color-light-gray);
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.signup-form label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-dark-gray);
+  margin-bottom: 4px;
+}
+
+#updates input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-dark-gray);
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+#updates input::placeholder {
+  color: #a09a93;
+}
+
+#updates input:focus {
+  outline: none;
+  border-bottom-color: #994033;
+}
+
+#updates button {
+  align-self: flex-start;
+  background-color: var(--color-dark-gray);
+  color: var(--color-off-white);
+  padding: 8px 22px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+#updates button:hover {
+  background-color: #994033;
+}
+
+.form-note {
+  font-size: 12px;
+  color: var(--color-mid-gray);
+  margin-top: 4px;
+}
+
 /* ================================
-   FOOTER — Martin
+   FOOTER
    ================================ */
+
+footer {
+  background-color: var(--color-dark-gray);
+  color: var(--color-off-white);
+  padding: 3rem 2rem;
+  font-size: 14px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-name {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* Lines that should be on one row */
+.footer-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-inline p {
+  margin: 0;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-mid-gray);
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+}
+
+footer a {
+  color: var(--color-off-white);
+}
+
+footer a:hover {
+  color: #994033;
+}
